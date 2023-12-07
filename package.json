@@ -1,5 +1,5 @@
 {
-  "name": "user-login",
+  "name": "wm-app-back",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
@@ -22,9 +22,10 @@
     "mongoDB",
     "morgan",
     "ecommerce",
-    "bcrypt"
+    "bcrypt",
+    "passport"
   ],
-  "author": "fermuzadev",
+  "author": "Wish Makers",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.1",
