@@ -8,7 +8,7 @@ import { __dirname } from "./utils.js";
 import { uploader } from "./utils.js";
 import sessionRouter from "./routes/session.router.js";
 import prodRouter from "./routes/products.router.js";
-import cartsRouter from "./routes/carts.router.js";
+import wishRouter from "./routes/wish.router.js";
 import indexRouter from "./routes/index.router.js";
 import realTimeRouter from "./routes/realtimeproducts.router.js";
 import messagesRouter from "./routes/messages.router.js";
@@ -63,7 +63,7 @@ app.use(
   "/api",
   sessionRouter,
   indexRouter,
-  cartsRouter,
+  wishRouter,
   prodRouter,
   messagesRouter,
   UserRouter

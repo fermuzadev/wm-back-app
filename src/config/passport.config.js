@@ -12,11 +12,11 @@ const opts = {
   passReqToCallback: true,
 };
 
-const githubOpts = {
-  clientID: process.env.GITHUB_CLIENT_ID,
-  clientSecret: process.env.GITHUB_CLIENT_SECRET,
-  callbackURL: process.env.GITHUB_CALLBACK,
-};
+// const githubOpts = {
+//   clientID: process.env.GITHUB_CLIENT_ID,
+//   clientSecret: process.env.GITHUB_CLIENT_SECRET,
+//   callbackURL: process.env.GITHUB_CALLBACK,
+// };
 
 export const init = () => {
   passport.use(
@@ -61,10 +61,10 @@ export const init = () => {
     })
   );
 
-  passport.use("github", new GithubStrategy(githubOpts));
-  passport.serializeUser((user, done) => {
-    done(null, user._id);
-  });
+  // passport.use("github", new GithubStrategy(githubOpts));
+  // passport.serializeUser((user, done) => {
+  //   done(null, user._id);
+  // });
   passport.deserializeUser(async (_id, done) => {
     const user = await UserModel.findById(_id);
     done(null, user);

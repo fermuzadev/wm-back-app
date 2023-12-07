@@ -29,20 +29,20 @@ router.get("/register", publicRouter, (req, res) => {
   res.render("register", { title: "User register" });
 });
 
-router.get("/", publicRouter, (req, res) => {
-  res.render("register", { title: "User register" });
+router.get("/", (req, res) => {
+  res.status(200).json({});
 });
 
 router.get("/recovery-password", publicRouter, (req, res) => {
   res.render("recovery-password", { title: "Password Recover" });
 });
 
-router.get("/user", async (req, res) => {
+router.get("/users", async (req, res) => {
   const users = await UserModel.find();
-  res.status(200).json(users);
+  res.status(200).json({ users });
 });
 
-router.post("/user", async (req, res) => {
+router.post("/users", async (req, res) => {
   try {
     const { body } = req;
     const user = await UserModel.create(body);
@@ -52,7 +52,7 @@ router.post("/user", async (req, res) => {
   }
 });
 
-router.get("/user/:uid", async (req, res) => {
+router.get("/users/:uid", async (req, res) => {
   const { uid } = req.params;
   try {
     const user = await UserModel.findById(uid);
@@ -66,14 +66,14 @@ router.get("/user/:uid", async (req, res) => {
   }
 });
 
-router.put("/user/:uid", async (req, res) => {
+router.put("/users/:uid", async (req, res) => {
   const { uid } = req.params;
   const { body } = req;
   const result = await UserModel.updateOne({ _id: uid }, { $set: body });
   res.status(204).end();
 });
 
-router.delete("/user/:uid", async (req, res) => {
+router.delete("/users/:uid", async (req, res) => {
   const { uid } = req.params;
   try {
     const deleted = await UserModel.deleteOne({ _id: uid });

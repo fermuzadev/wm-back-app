@@ -10,14 +10,19 @@ const Address = new Schema(
 );
 const userSchema = new mongoose.Schema(
   {
-    first_name: { type: String },
-    last_name: { type: String },
+    name: { type: String },
     email: { type: String, required: true, unique: true },
     age: { type: Number },
     password: { type: String, required: true },
     status: { type: String, default: "active", enum: ["active", "inactive"] },
     adress: { type: Address, default: {} },
+    species: {
+      type: String,
+      default: "N/A",
+      enum: ["Fem", "Masc", "No Binario"],
+    },
     rol: { type: String, default: "user", enum: ["user", "admin"] },
+    image: { type: Array, default: [] },
   },
   { timestamps: true }
 );
