@@ -8,9 +8,10 @@ Node.JS || Express.js || Websocket || Socket.io || Sweet Alert 2 || Routers || H
 #Date & User Login & Chat => https://codingclothes.onrender.com/
 
 #Testing Endpoints
-/api/products
-/api/messages
-/realtimeproducts
-/login
-/logout
-/register
+/api/users => Metodos GET / POST / PUT / DELETE 
+/api/wishlist => Lista de Deseos (match serian) Metodos idem anterior 
+/api/messages => Chat 
+/realtimeproducts => No dar atencion
+/login => logeo (user y password)
+/logout 
+/register => Registro 
