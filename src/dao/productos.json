@@ -1,0 +1,57 @@
+[
+	{
+		"id": 1275,
+		"title": "White T-SHIRT",
+		"description": "White T-Shirt WIFI always connected",
+		"code": "code1",
+		"price": "5000",
+		"status": true,
+		"stock": 10,
+		"category": "T-Shirts",
+		"thumbnails": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSdfBhB0GS_VjFlsO1r3s8uZu0k8wT2GjKToVulicWXHX64C091ecUT8imJxpTnWrubsHfVoqKh9AjwOFCmFsaytXcWa7Hd6gkD_Hadioxtnq2Tj_brfOr64w&usqp=CAE"
+	},
+	{
+		"id": 2025,
+		"title": "Black T-Shirt",
+		"description": "Black T-Shirt code Hello World C ",
+		"code": "code2",
+		"price": "8000",
+		"status": true,
+		"stock": 15,
+		"category": "T-Shirts",
+		"thumbnails": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81mwYqDYsqL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SL1500_.png"
+	},
+	{
+		"id": 3262,
+		"title": "T-Shirt VSC",
+		"description": "Black T-Shirt Visual Studio Code",
+		"code": "code3",
+		"price": "4000",
+		"status": true,
+		"stock": 20,
+		"category": "T-Shirts",
+		"thumbnails": "https://cdn.shopify.com/s/files/1/0537/9483/2552/products/Visual_M1_e6d6fc8c-8dae-499c-9360-99e022907d4a_720x.jpg?v=1617901156"
+	},
+	{
+		"id": 8209,
+		"title": "ExpressJS T-Shirt",
+		"description": "ExpressJS T-Shirt",
+		"code": "code4",
+		"price": "5000",
+		"status": true,
+		"stock": 50,
+		"category": "T-Shirts",
+		"thumbnails": "https://ae01.alicdn.com/kf/Sa883d49de58b4feaac4832bc08f346b4U/Camiseta-de-algod-n-para-hombres-y-mujeres-camisa-con-estampado-Diy-Expressjs-Express-Js-programador.jpg"
+	},
+	{
+		"id": 8420,
+		"title": "NodeJS T-Shirt",
+		"description": "Node JS T-Shirt ",
+		"code": "code5",
+		"price": "9000",
+		"status": true,
+		"stock": 15,
+		"category": "T-Shirts",
+		"thumbnails": "https://down-br.img.susercontent.com/file/sg-11134201-7qve2-liyj2hxqp7nqf9"
+	}
+]

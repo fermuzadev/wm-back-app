@@ -1,0 +1,25 @@
+body {
+    color : hsl(205, 20%, 94%);
+    background-color: #11191F;
+}
+
+.img-thumbnail {
+    max-height: 100px; /*! Adjust the height as needed */
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  @media screen and (min-width: 769px) {
+    table {
+      max-width: 80%; /*! Adjust the maximum width as needed */
+      margin: auto;
+    }
+  }

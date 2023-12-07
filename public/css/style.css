@@ -1,0 +1,53 @@
+body {
+    color : hsl(205, 20%, 94%);
+    background-color: #11191F;
+}
+
+.img-thumbnail {
+    max-height: 100px; /*! Adjust the height as needed */
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+
+  #login-container {
+    text-align: center;
+  }
+
+  #github-login-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #24292e; /* Color de fondo de GitHub */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #24292e; /* Color del borde igual al color de fondo */
+  }
+  #github-login-btn img {
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    width: 24px; /* Ancho de la imagen */
+    height: 24px; /* Altura de la imagen */
+  }
+
+  #github-login-btn:hover {
+    background-color: #181c20; /* Cambiar el color de fondo al pasar el ratón */
+  }
+
+
+  @media screen and (min-width: 769px) {
+    table {
+      max-width: 80%; /*! Adjust the maximum width as needed */
+      margin: auto;
+    }
+  }
+

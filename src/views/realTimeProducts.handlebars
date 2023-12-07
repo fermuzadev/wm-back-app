@@ -1,0 +1,106 @@
+<article>
+  <header>
+    <p><b>Welcome { {{user.rol}} } to the Online Store App</b></p>
+  </header>
+  <p><b>User name: </b> <i>{{user.first_name}}</i></p>
+  <p><b>Last name: </b> <i>{{user.last_name}}</i></p>
+  <p><b>Mail : </b><i>{{user.email}}</i></p>
+  <footer>
+    <a href="/logout" role="button">Logout</a>
+  </footer>
+</article>
+<form id="form">
+  <h1>Products upload by Socket.io</h1>
+  <div class="grid">
+    <label for="title">
+      Product Title:
+      <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Product Title"
+        required
+      />
+    </label>
+    <label for="description">
+      Description:
+      <input
+        type="text"
+        id="description"
+        name="description"
+        placeholder="Product Description"
+        required
+      />
+    </label>
+    <label for="code">
+      Product Code:
+      <input
+        type="text"
+        id="code"
+        name="code"
+        placeholder="Product Code"
+        required
+      />
+    </label>
+    <label for="price">
+      Product Price:
+      <input
+        type="number"
+        id="price"
+        name="price"
+        placeholder="Product Price"
+        required
+      />
+    </label>
+    <label for="stock">
+      Product Stock:
+      <input
+        type="number"
+        id="stock"
+        name="stock"
+        placeholder="Product Stock"
+        required
+      />
+    </label>
+    <label for="category">
+      Category:
+      <input
+        type="text"
+        id="category"
+        name="category"
+        placeholder="Product Category"
+        required
+      />
+    </label>
+    <label for="thumbnails">
+      Thumbnails:
+      <input
+        type="text"
+        id="thumbnails"
+        name="thumbnails"
+        placeholder="Product Thumbnails"
+        required
+      />
+    </label>
+  </div>
+  <button type="submit" id="submit">Add product</button>
+</form>
+<form id="deleteForm">
+<div>
+  <label for="idDelete">
+    Product ID to Delete:
+    <input
+      type="text"
+      id="idDelete"
+      name="idDelete"
+      placeholder="Product ID to delete"
+      required
+    />
+  </label>
+  <button type="submit" id="delete" class="contrast">Delete Product</button>
+  </form>
+</div>
+<div id="productsSocket">
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products/index.js"></script>

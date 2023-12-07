@@ -1,0 +1,117 @@
+<div class="card-group">
+  <h1>Products with MongoDB</h1>
+  <form id="form" action="/api/products/" method="post" enctype="multipart/form-data">
+  <div class="grid">
+    <label for="title">
+      Product Title:
+      <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Product Title"
+        required
+      />
+    </label>
+    <label for="description">
+      Description:
+      <input
+        type="text"
+        id="description"
+        name="description"
+        placeholder="Product Description"
+        required
+      />
+    </label>
+    <label for="code">
+      Product Code:
+      <input
+        type="text"
+        id="code"
+        name="code"
+        placeholder="Product Code"
+        required
+      />
+    </label>
+    <label for="price">
+      Product Price:
+      <input
+        type="number"
+        id="price"
+        name="price"
+        placeholder="Product Price"
+        required
+      />
+    </label>
+    <label for="stock">
+      Product Stock:
+      <input
+        type="number"
+        id="stock"
+        name="stock"
+        placeholder="Product Stock"
+        required
+      />
+    </label>
+    <label for="category">
+      Category:
+      <input
+        type="text"
+        id="category"
+        name="category"
+        placeholder="Product Category"
+        required
+      />
+    </label>
+    <label for="thumbnails">
+      Thumbnails:
+      <input
+        type="file"
+        id="thumbnails"
+        name="thumbnails"
+        placeholder="Product Thumbnails"
+        required
+      />
+    </label>
+  </div>
+  <button type="submit" id="submit">Add product</button>
+</form>
+<form id="deleteForm">
+<div>
+  <label for="idDelete">
+    Product ID to Delete:
+    <input
+      type="text"
+      id="idDelete"
+      name="idDelete"
+      placeholder="Product ID to delete"
+      required
+    />
+  </label>
+  <button type="submit" id="delete" class="contrast">Delete Product</button>
+  </form>
+</div>
+<div id="productsSocket">
+</div>
+  {{#each payload}}
+  <div class="card">
+    <article>
+    <img src={{this.thumbnails}} class="card-img-top img-fluid img-thumbnail" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Product Title: {{this.title}}</h5>
+        <p class="card-text">ID: {{this._id}}</p>
+        <p class="card-text">CODE: {{this.code}}</p>
+        <p class="card-text">Description: {{this.description}}</p>
+        <p class="card-text">Price: ${{this.price}}</p>
+        <p class="card-text">Category: {{this.category}}</p>
+        <p class="card-text">Stock: {{this.stock}}</small></p>
+      </div>
+    </article>
+  </div>
+  {{/each }}
+</div>
+<div>
+  
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products/index.js"></script>
