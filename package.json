@@ -11,6 +11,9 @@
     "build": "npm install && npm run transpile",
     "transpile": "babel src -d dist"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "keywords": [
     "multer",
     "javascript",
