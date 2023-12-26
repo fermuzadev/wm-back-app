@@ -15,12 +15,7 @@ const userSchema = new mongoose.Schema(
     age: { type: Number },
     password: { type: String, required: true },
     status: { type: String, default: "active", enum: ["active", "inactive"] },
-    adress: { type: Address, default: {} },
-    species: {
-      type: String,
-      default: "N/A",
-      enum: ["Fem", "Masc", "No Binario"],
-    },
+    address: { type: Address, default: {} },
     rol: { type: String, default: "user", enum: ["user", "admin"] },
     image: { type: Array, default: [] },
   },
