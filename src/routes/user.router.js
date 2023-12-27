@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { __dirname } from "../utils.js";
-
+import { createHash, isValidPassword } from "../utils.js";
 import UserModel from "../dao/models/user.model.js";
 
 const router = Router();
@@ -45,7 +45,9 @@ router.get("/users", async (req, res) => {
 router.post("/users", async (req, res) => {
   try {
     const { body } = req;
-    const user = await UserModel.create(body);
+    let { password } = req.body;
+    password = createHash(password);
+    const user = await UserModel.create({ ...body, password });
     res.status(201).json(user);
   } catch (error) {
     res.status(400).json({ message: error.message });

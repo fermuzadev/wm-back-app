@@ -59,6 +59,7 @@ app.use(
   uploader.single("thumbnails"),
   sessionRouter,
   UserRouter,
+  wishRouter,
   realTimeRouter
 );
 app.use(
